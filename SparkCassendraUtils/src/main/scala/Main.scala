@@ -1,4 +1,5 @@
 import org.apache.spark.SparkConf
+
 import org.apache.spark.SparkContext
 import com.datastax.spark.connector._
 import java.sql.Timestamp

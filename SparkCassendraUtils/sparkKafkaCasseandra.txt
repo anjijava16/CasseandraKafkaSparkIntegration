@@ -1,7 +1,25 @@
+======================================================================================================================================================
+######################################################################################################################################################
+======================================================================================================================================================
+
+
+
+
+Spark Casseandra Connection :: 
+
 Cassandra With Spark:                  https://github.com/datastax/spark-cassandra-connector/tree/master/doc
 DataFrame Notes :                      https://github.com/datastax/spark-cassandra-connector/blob/master/doc/14_data_frames.md
 Perfomace Cassandra                   https://github.com/datastax/spark-cassandra-connector/blob/master/doc/11_metrics.md
 
+
+Spark MongoDB Connection :  https://docs.mongodb.com/spark-connector/master/java-api/
+
+Spark Hbase Connector :   https://github.com/chetkhatri/spark-hbase-connector
+
+
+======================================================================================================================================================
+######################################################################################################################################################
+======================================================================================================================================================
 
 java -cp kalyan-bigdata-examples.jar com.CCC.YYYY.examples.GenerateUsers -f /tmp/users.csv -d ',' -n 10 -s 1
 
