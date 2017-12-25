@@ -1,0 +1,47 @@
+Cassandra With Spark:                  https://github.com/datastax/spark-cassandra-connector/tree/master/doc
+DataFrame Notes :                      https://github.com/datastax/spark-cassandra-connector/blob/master/doc/14_data_frames.md
+Perfomace Cassandra                   https://github.com/datastax/spark-cassandra-connector/blob/master/doc/11_metrics.md
+
+
+java -cp kalyan-bigdata-examples.jar com.CCC.YYYY.examples.GenerateUsers -f /tmp/users.csv -d ',' -n 10 -s 1
+
+
+============================================ Kafka =======================================
+
+
+$KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties
+
+
+$KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties
+
+
+$KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+
+
+$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+tail -f /tmp/users.csv | $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+
+
+
+
+Command in Kafka-0.9.x
+$KAFKA_HOME/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+
+Command in Kafka-0.10.x
+$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+
+
+=================================================================================================
+
+113,user913,user913,user913@gmail.com,India,Andhra Pradesh,Vijayawada,2017-04-25 05:04:47
+
+create table users( userID int primary key ,
+userfirstname text,
+userlastname text,
+useremail text,
+usercountry text,
+userstate text,
+usercity text,
+usercreationdate timestamp)
